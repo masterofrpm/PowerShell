@@ -15,9 +15,12 @@ function Invoke-LoudRickRoll {
     PS C:\>Invoke-LoudRickRoll
 #>
 
-    $IEComObject = New-Object -com "InternetExplorer.Application"
-    $IEComObject.visible = $False
-    $IEComObject.navigate("http://www.youtube.com/watch?v=oHg5SJYRHA0")
+    #$IEComObject = New-Object -com "InternetExplorer.Application"
+    #$IEComObject.visible = $False
+    #$IEComObject.navigate("http://www.youtube.com/watch?v=oHg5SJYRHA0")
+    #cvlc --vout none <URL>
+    cvlc --no-video "http://www.youtube.com/watch?v=oHg5SJYRHA0"
+
     $EndTime = (Get-Date).addminutes(3)
         
         Do {
